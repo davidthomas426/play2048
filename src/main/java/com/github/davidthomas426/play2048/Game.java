@@ -1,25 +1,16 @@
 package com.github.davidthomas426.play2048;
 
-import org.openqa.selenium.firefox.FirefoxDriver;
-
 public class Game {
 
 	private Engine engine;
 	private Strategy strategy;
-
-	public static void main(String[] args) throws InterruptedException {
-		Engine engine = new SeleniumEngine(new FirefoxDriver());
-		Strategy strategy = new UldrStrategy();
-		Game game = new Game(engine, strategy);
-		game.run();
-	}
 
 	public Game(Engine engine, Strategy strategy) {
 		this.strategy = strategy;
 		this.engine = engine;
 	}
 
-	public void run() throws InterruptedException {
+	public void run() {
 		while (!engine.isOver()) {
 			Grid grid = engine.getGrid();
 			printGrid(grid);
