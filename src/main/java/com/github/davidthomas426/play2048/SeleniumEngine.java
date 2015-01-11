@@ -82,7 +82,7 @@ public class SeleniumEngine implements Engine {
 	public void move(Move move) {
 		body.sendKeys(keyMap.get(move));
 		
-		// Delay
+		// Delay to give the game a chance to process the move.
 		try {
 			Thread.sleep(delayMillis);
 		} catch (InterruptedException e) {

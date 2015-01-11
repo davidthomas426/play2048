@@ -16,7 +16,7 @@ public class Game {
 			printGrid(grid);
 			System.out.println();
 
-			Move nextMove = strategy.next();
+			Move nextMove = strategy.next(grid);
 			engine.move(nextMove);
 		}
 
