@@ -7,3 +7,7 @@ Compiling/running with Maven
 After cloning, just run
 
     mvn compile exec:java
+
+To use Maven to generate an Eclipse project, run
+
+    mvn eclipse:eclipse
