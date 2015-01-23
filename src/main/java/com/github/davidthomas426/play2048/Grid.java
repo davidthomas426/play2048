@@ -36,6 +36,10 @@ public class Grid {
 		}
 	}
 	
+	public int[][] getCellArray() {
+		return cells.clone();
+	}
+	
 	public String ascii() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("+--------+--------+--------+--------+").append(sep);
